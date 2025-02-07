@@ -1,5 +1,8 @@
 # panel-component
 
+## deploy
+https://alsecode.github.io/panelComponent/
+
 ## Project setup
 ```
 npm install
