@@ -7,5 +7,6 @@ module.exports = defineConfig({
         additionalData: `@import "~@/styles/variables.scss";`
       }
     }
-  }
+  },
+  publicPath: "/panelComponent/",
 })
