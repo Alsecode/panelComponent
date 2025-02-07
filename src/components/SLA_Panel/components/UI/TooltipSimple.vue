@@ -1,5 +1,5 @@
 <template>
-  <div class="tooltip-wrapper" @mouseenter="showTooltip" @mouseleave="hideTooltip"   >
+  <div class="tooltip-wrapper" @mouseenter="showTooltip" @mouseleave="hideTooltip" @touchstart="toggleTooltip">
     <slot name="trigger" class="trigger"></slot>
       <div
         v-if="visible"
@@ -26,6 +26,8 @@ const props = defineProps({
 const visible = ref(false);
 const showTooltip = () => visible.value = true;
 const  hideTooltip = () => visible.value = false;
+// Поддержка кликов на телефоне
+const toggleTooltip = () => visible.value = !visible.value;
 </script>
 
 <style lang="scss" scoped>
